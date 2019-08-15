@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.skaggsm.startthemusic.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MusicTrackerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

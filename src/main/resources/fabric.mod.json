@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-start-the-music",
+  "version": "${version}",
+  "name": "Start the Music!",
+  "description": "A Fabric mod that sets the cooldown until the next music track to 0.",
+  "authors": [
+    "magneticflux-"
+  ],
+  "contact": {
+    "homepage": "https://github.com/magneticflux-/fabric-start-the-music",
+    "sources": "https://github.com/magneticflux-/fabric-start-the-music"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/fabric-start-the-music/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.skaggsm.startthemusic.FabricStartTheMusic"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.skaggsm.startthemusic.FabricStartTheMusicClient"
+      }
+    ],
+    "modmenu": [
+    ]
+  },
+  "mixins": [
+    "fabric-start-the-music.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.3.30"
+  },
+  "suggests": {
+  }
+}

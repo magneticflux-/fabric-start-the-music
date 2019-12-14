@@ -1,7 +1,7 @@
 package com.skaggsm.startthemusic
 
-import me.sargunvohra.mcmods.autoconfig1.ConfigData
-import me.sargunvohra.mcmods.autoconfig1.annotation.Config
+import me.sargunvohra.mcmods.autoconfig1u.ConfigData
+import me.sargunvohra.mcmods.autoconfig1u.annotation.Config
 
 /**
  * Created by Mitchell Skaggs on 8/14/2019.

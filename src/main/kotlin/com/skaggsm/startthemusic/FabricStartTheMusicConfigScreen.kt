@@ -1,7 +1,7 @@
 package com.skaggsm.startthemusic
 
 import io.github.prospector.modmenu.api.ModMenuApi
-import me.sargunvohra.mcmods.autoconfig1.AutoConfig
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig
 import net.minecraft.client.gui.screen.Screen
 import java.util.function.Function
 
@@ -14,6 +14,6 @@ class FabricStartTheMusicConfigScreen : ModMenuApi {
     }
 
     override fun getConfigScreenFactory(): Function<Screen, out Screen> {
-        return Function<Screen, Screen> { screen -> AutoConfig.getConfigScreen(FabricStartTheMusicConfig::class.java, screen).get() }
+        return Function { AutoConfig.getConfigScreen(FabricStartTheMusicConfig::class.java, it).get() }
     }
 }

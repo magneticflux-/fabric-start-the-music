@@ -2,8 +2,8 @@ package com.skaggsm.startthemusic
 
 import com.skaggsm.startthemusic.FabricStartTheMusic.MOD_ID
 import com.skaggsm.startthemusic.mixin.MusicTrackerMixin
-import me.sargunvohra.mcmods.autoconfig1.AutoConfig
-import me.sargunvohra.mcmods.autoconfig1.serializer.Toml4jConfigSerializer
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig
+import me.sargunvohra.mcmods.autoconfig1u.serializer.Toml4jConfigSerializer
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding

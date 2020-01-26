@@ -1,16 +1,15 @@
-# start-the-music
+[![](http://cf.way2muchnoise.eu/short_start-the-music_downloads.svg)](https://minecraft.curseforge.com/projects/start-the-music)
+[![](http://cf.way2muchnoise.eu/versions/start-the-music_all.svg)](https://minecraft.curseforge.com/projects/start-the-music)
+[![](http://cf.way2muchnoise.eu/packs/short_start-the-music.svg)](https://minecraft.curseforge.com/projects/start-the-music)
 
-## Setup
+# Start the Music!
 
-1. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-2. Run the following command:
+Provides a button to start the music!
 
-```
-./gradlew idea
-```
+---
 
-## License
+If you feel generous or want to encourage my work, you can throw a few dollars my way here:
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L0XZWT)
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SYSJUAMK9JVWC&currency_code=USD&source=url)

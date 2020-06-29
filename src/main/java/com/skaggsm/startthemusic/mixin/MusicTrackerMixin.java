@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
  */
 @Mixin(MusicTracker.class)
 public interface MusicTrackerMixin {
+    @SuppressWarnings("unused")
     @Accessor("timeUntilNextSong")
     int getTimeUntilNextSong();
 

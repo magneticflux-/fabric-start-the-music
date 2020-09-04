@@ -6,9 +6,12 @@ import me.sargunvohra.mcmods.autoconfig1u.AutoConfig
 import me.sargunvohra.mcmods.autoconfig1u.serializer.Toml4jConfigSerializer
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding
 import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.fabricmc.fabric.api.event.client.ClientTickCallback
+import net.minecraft.client.options.KeyBinding
 import net.minecraft.client.util.InputUtil
 import net.minecraft.util.Identifier
 import org.lwjgl.glfw.GLFW
@@ -28,19 +31,17 @@ object FabricStartTheMusic : ModInitializer {
 }
 
 object FabricStartTheMusicClient : ClientModInitializer {
-    lateinit var resetMusicKeyBinding: FabricKeyBinding
+    lateinit var resetMusicKeyBinding: KeyBinding
 
     override fun onInitializeClient() {
-        resetMusicKeyBinding = FabricKeyBinding.Builder.create(
-                Identifier(MOD_ID, "reset_music_key_binding"),
-                InputUtil.Type.KEYSYM,
+        resetMusicKeyBinding = KeyBinding(
+                "key.$MOD_ID.reset_music_key_binding",
                 GLFW.GLFW_KEY_G,
-                "key.categories.misc"
-        ).build()
+                "key.categories.misc")
 
-        KeyBindingRegistry.INSTANCE.register(resetMusicKeyBinding)
+        KeyBindingHelper.registerKeyBinding(resetMusicKeyBinding)
 
-        ClientTickCallback.EVENT.register(ClientTickCallback {
+        ClientTickEvents.START_CLIENT_TICK.register(ClientTickEvents.StartTick {
             if (resetMusicKeyBinding.isPressed)
                 if (it.options.keySneak.isPressed) {
                     it.musicTracker.stop()

@@ -109,7 +109,7 @@ publishing {
         mavenLocal()
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/magneticflux-/jetpack-compose-optics")
+            url = uri("https://maven.pkg.github.com/magneticflux-/fabric-start-the-music")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
@@ -149,7 +149,6 @@ curseforge {
         changelog =
             "View the latest changelog here: https://github.com/magneticflux-/fabric-start-the-music/releases"
         mainArtifact(tasks.remapJar.get(), closureOf<CurseArtifact> {
-            displayName = "$archives_base_name-$project.version"
             relations(closureOf<CurseRelation> {
                 requiredDependency("fabric-api")
             })

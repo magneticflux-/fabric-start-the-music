@@ -148,13 +148,13 @@ curseforge {
         addGameVersion("Fabric")
         changelog =
             "View the latest changelog here: https://github.com/magneticflux-/fabric-start-the-music/releases"
-        mainArtifact(tasks.remapJar, closureOf<CurseArtifact> {
+        mainArtifact(tasks.remapJar.get(), closureOf<CurseArtifact> {
             displayName = "$archives_base_name-$project.version"
             relations(closureOf<CurseRelation> {
                 requiredDependency("fabric-api")
             })
         })
-        addArtifact(tasks.remapSourcesJar)
+        addArtifact(tasks["sourcesJar"])
     })
     options(closureOf<Options> {
         forgeGradleIntegration = false

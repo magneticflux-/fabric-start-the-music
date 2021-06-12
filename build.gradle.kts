@@ -144,7 +144,7 @@ curseforge {
     project(closureOf<CurseProject> {
         id = curseforge_id
         releaseType = "release"
-        addGameVersion("$project.minecraft_version")
+        addGameVersion(minecraft_version)
         addGameVersion("Fabric")
         changelog =
             "View the latest changelog here: https://github.com/magneticflux-/fabric-start-the-music/releases"

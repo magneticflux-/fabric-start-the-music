@@ -13,7 +13,6 @@ plugins {
     id("fabric-loom") version "0.8-SNAPSHOT"
     id("com.github.ben-manes.versions") version "0.39.0"
     id("com.matthewprenger.cursegradle") version "1.4.0"
-    kotlin("jvm") version "1.5.10"
     id("com.diffplug.spotless") version "5.12.5"
     id("org.shipkit.shipkit-auto-version") version "1.+"
     id("org.shipkit.shipkit-changelog") version "1.+"
@@ -65,21 +64,16 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
-
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.6.1+kotlin.1.5.10")
-    include("net.fabricmc:fabric-language-kotlin:1.6.1+kotlin.1.5.10")
 }
 
 tasks.processResources {
     inputs.properties(
-        "version" to project.version,
-        "archives_base_name" to archives_base_name
+        "version" to project.version
     )
 
     filesMatching("fabric.mod.json") {
         expand(
-            "version" to project.version,
-            "archives_base_name" to archives_base_name
+            "version" to project.version
         )
     }
 }
@@ -158,7 +152,6 @@ curseforge {
             displayName = "$archives_base_name-$project.version"
             relations(closureOf<CurseRelation> {
                 requiredDependency("fabric-api")
-                embeddedLibrary("fabric-language-kotlin")
             })
         })
         addArtifact(tasks.remapSourcesJar)
@@ -169,12 +162,6 @@ curseforge {
 }
 
 spotless {
-    kotlin {
-        ktlint("0.+")
-    }
-    kotlinGradle {
-        ktlint("0.+")
-    }
 }
 
 

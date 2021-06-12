@@ -15,19 +15,8 @@
   "icon": "assets/fabric-start-the-music/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      {
-        "adapter": "kotlin",
-        "value": "com.skaggsm.startthemusic.FabricStartTheMusic"
-      }
-    ],
     "client": [
-      {
-        "adapter": "kotlin",
-        "value": "com.skaggsm.startthemusic.FabricStartTheMusicClient"
-      }
-    ],
-    "modmenu": [
+      "com.skaggsm.startthemusic.FabricStartTheMusicClient"
     ]
   },
   "mixins": [
@@ -36,8 +25,7 @@
   "depends": {
     "minecraft": "1.17.x",
     "fabricloader": ">=0.13.0",
-    "fabric": "*",
-    "fabric-language-kotlin": ">=1.5.10"
+    "fabric": "*"
   },
   "suggests": {
   }

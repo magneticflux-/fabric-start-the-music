@@ -1,0 +1,5 @@
+extraction:
+  java:
+    index:
+      java_version: 16
+      properties_files: true

@@ -10,10 +10,10 @@ plugins {
     java
     idea
     `maven-publish`
-    id("fabric-loom") version "0.8-SNAPSHOT"
+    id("fabric-loom") version "0.10-SNAPSHOT"
     id("com.github.ben-manes.versions") version "0.39.0"
     id("com.matthewprenger.cursegradle") version "1.4.0"
-    id("com.diffplug.spotless") version "5.12.5"
+    id("com.diffplug.spotless") version "6.0.4"
     id("org.shipkit.shipkit-auto-version") version "1.+"
     id("org.shipkit.shipkit-changelog") version "1.+"
     id("org.shipkit.shipkit-github-release") version "1.+"
@@ -36,8 +36,8 @@ repositories {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 val archives_base_name: String by project
@@ -85,7 +85,7 @@ tasks.withType<JavaCompile> {
     // If Javadoc is generated, this must be specified in that task too.
     options.encoding = "UTF-8"
     // Minecraft 1.17 (21w19a) upwards uses Java 16.
-    options.release.set(16)
+    options.release.set(17)
 }
 
 java {

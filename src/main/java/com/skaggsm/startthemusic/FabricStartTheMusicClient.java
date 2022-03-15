@@ -27,7 +27,7 @@ public class FabricStartTheMusicClient implements ClientModInitializer {
                 MusicTracker musicTracker = client.getMusicTracker();
                 MusicTrackerMixin musicTrackerMixin = (MusicTrackerMixin) musicTracker;
 
-                if (client.options.keySneak.isPressed()) {
+                if (client.options.sneakKey.isPressed()) {
                     client.getMusicTracker().stop();
                     musicTrackerMixin.setTimeUntilNextSong(Integer.MAX_VALUE);
                 } else {

@@ -23,7 +23,7 @@
     "fabric-start-the-music.mixins.json"
   ],
   "depends": {
-    "minecraft": "1.18.x",
+    "minecraft": ">=1.18",
     "fabricloader": ">=0.12",
     "fabric": "*"
   },

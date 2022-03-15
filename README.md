@@ -1,6 +1,6 @@
-[![](http://cf.way2muchnoise.eu/short_start-the-music_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
-[![](http://cf.way2muchnoise.eu/versions/start-the-music_all.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
-[![](http://cf.way2muchnoise.eu/packs/short_start-the-music.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
+[![](http://cf.way2muchnoise.eu/short_335581_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
+[![](http://cf.way2muchnoise.eu/versions/335581_all.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
+[![](http://cf.way2muchnoise.eu/packs/short_335581.svg)](https://www.curseforge.com/minecraft/mc-mods/start-the-music)
 
 # Start the Music!
 

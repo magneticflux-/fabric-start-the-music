@@ -10,7 +10,7 @@ plugins {
     java
     idea
     `maven-publish`
-    id("fabric-loom") version "0.11-SNAPSHOT"
+    id("fabric-loom") version "0.12-SNAPSHOT"
     id("com.github.ben-manes.versions") version "0.42.0"
     id("com.matthewprenger.cursegradle") version "1.4.0"
     id("com.diffplug.spotless") version "6.3.0"
@@ -23,16 +23,16 @@ tasks.withType<DependencyUpdatesTask> {
     gradleReleaseChannel = "current"
     rejectVersionIf {
         candidate.version.contains("""-M\d+""".toRegex())
-                || candidate.version.contains("RC")
+            || candidate.version.contains("RC")
     }
 }
 
 repositories {
+    mavenCentral()
     maven {
         url = uri("https://maven.fabricmc.net/")
         name = "Fabric"
     }
-    mavenCentral()
 }
 
 java {
@@ -98,10 +98,7 @@ java {
 publishing {
     publications {
         create<MavenPublication>("mod") {
-            artifact(tasks.remapJar)
-            artifact(tasks["sourcesJar"]) {
-                builtBy(tasks.remapSourcesJar)
-            }
+            from(components["java"])
         }
     }
 

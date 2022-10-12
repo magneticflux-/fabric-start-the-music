@@ -172,6 +172,9 @@ modrinth {
     uploadFile.set(tasks.remapJar as Any)
     additionalFiles.add(tasks.remapSourcesJar as Any)
     loaders.addAll("fabric", "quilt")
+    dependencies {
+        required.project("fabric-api")
+    }
 }
 
 spotless {
